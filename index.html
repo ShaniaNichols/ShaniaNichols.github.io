@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shania Nichols | Gravitational-Wave Astrophysics</title>
-  <meta name="description" content="Shania Nichols, postdoctoral researcher studying nanohertz gravitational waves with pulsar timing (NANOGrav) and gravitational-wave detector noise (aLIGO).">
+  <meta name="description" content="Shania Nichols, NANOGrav PFC postdoctoral researcher at the SETI Institute, studying pulsar timing, pulse profile variability, and gravitational-wave detector noise.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
       --card: #ffffff;
       --accent: #24508f;
       --accent-soft: #e8eef8;
-      --max: 860px;
+      --max: 880px;
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -43,7 +43,6 @@
     a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
     a:hover { border-bottom-color: currentColor; }
 
-    /* Navigation */
     nav {
       position: sticky; top: 0; z-index: 10;
       background: color-mix(in srgb, var(--bg) 88%, transparent);
@@ -54,17 +53,16 @@
       max-width: var(--max); margin: 0 auto; padding: 14px 24px;
       display: flex; align-items: center; justify-content: space-between; gap: 16px;
     }
-    nav .name { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: 18px; color: var(--ink); }
-    nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 22px; flex-wrap: wrap; }
+    nav .name { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: 18px; color: var(--ink); white-space: nowrap; }
+    nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-end; }
     nav ul a { color: var(--muted); font-size: 14.5px; font-weight: 500; }
     nav ul a:hover { color: var(--accent); border-bottom-color: transparent; }
 
     main { max-width: var(--max); margin: 0 auto; padding: 0 24px 80px; }
 
-    /* Hero */
     .hero {
       display: grid; grid-template-columns: 200px 1fr; gap: 40px; align-items: center;
-      padding: 64px 0 40px;
+      padding: 64px 0 36px;
     }
     .photo {
       width: 200px; height: 200px; border-radius: 50%;
@@ -86,8 +84,7 @@
     }
     .links a:hover { border-color: var(--accent); }
 
-    /* Pulse-profile motif */
-    .pulse { display: block; width: 100%; height: 48px; margin: 8px 0 0; color: var(--accent); opacity: .55; }
+    .pulse { display: block; width: 100%; height: 48px; margin: 4px 0 0; color: var(--accent); opacity: .55; }
 
     section { padding: 36px 0 8px; border-top: 1px solid var(--rule); }
     section:first-of-type { border-top: none; }
@@ -98,16 +95,21 @@
     h3 { font-size: 17px; font-weight: 600; margin: 26px 0 6px; }
     p { margin: 0 0 14px; }
 
-    /* Lists of items */
     .entries { list-style: none; margin: 0; padding: 0; }
     .entries li { padding: 12px 0; border-bottom: 1px dashed var(--rule); }
     .entries li:last-child { border-bottom: none; }
     .meta { color: var(--muted); font-size: 14.5px; }
+    .when { color: var(--muted); font-size: 14.5px; white-space: nowrap; }
+    .row { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; }
     .tag {
       display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: .02em;
       color: var(--accent); background: var(--accent-soft);
       padding: 1px 8px; border-radius: 4px; margin-right: 6px; vertical-align: 1px;
     }
+    .pubs li { padding: 14px 0; }
+    .pubs .title { font-weight: 600; }
+    .pubs .my-role { display: block; margin-top: 4px; font-size: 14.5px; color: var(--muted); }
+    .pubs .ids a { font-size: 14px; margin-right: 12px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
     .note { font-size: 14.5px; color: var(--muted); }
 
@@ -116,13 +118,14 @@
       border-top: 1px solid var(--rule); color: var(--muted); font-size: 14px;
     }
 
-    @media (max-width: 680px) {
+    @media (max-width: 720px) {
       body { font-size: 16px; }
       nav ul { display: none; }
-      .hero { grid-template-columns: 1fr; text-align: left; gap: 24px; padding-top: 40px; }
+      .hero { grid-template-columns: 1fr; gap: 24px; padding-top: 40px; }
       .photo { width: 140px; height: 140px; }
       h1 { font-size: 34px; }
       .two-col { grid-template-columns: 1fr; }
+      .row { flex-direction: column; gap: 0; }
     }
   </style>
 </head>
@@ -134,9 +137,10 @@
     <ul>
       <li><a href="#research">Research</a></li>
       <li><a href="#publications">Publications</a></li>
-      <li><a href="#talks">Talks &amp; Outreach</a></li>
+      <li><a href="#talks">Talks</a></li>
+      <li><a href="#outreach">Outreach</a></li>
       <li><a href="#service">Service</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="cv/Nichols_CV.pdf">CV</a></li>
     </ul>
   </div>
 </nav>
@@ -145,149 +149,246 @@
 
   <header class="hero">
     <div class="photo">
-      <!-- Replace with: <img src="images/headshot.jpg" alt="Shania Nichols"> -->
-      Add a headshot<br>images/headshot.jpg
+      <img src="images/headshot.jpg" alt="Shania Nichols">
     </div>
     <div>
       <h1>Shania Nichols</h1>
       <p class="role">NANOGrav Physics Frontiers Center Postdoctoral Researcher<br>SETI Institute</p>
       <ul class="links">
         <li><a href="cv/Nichols_CV.pdf">CV</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="https://github.com/YOUR-USERNAME">GitHub</a></li>
-        <li><a href="https://orcid.org/YOUR-ORCID">ORCID</a></li>
-        <li><a href="#contact">Email</a></li>
+        <li><a href="mailto:shania.nichols@nanograv.org">Email</a></li>
+        <li><a href="https://orcid.org/0009-0001-1750-3531">ORCID</a></li>
+        <li><a href="https://www.linkedin.com/in/shania-nichols-b16a08189/">LinkedIn</a></li>
       </ul>
     </div>
   </header>
 
-  <svg class="pulse" viewBox="0 0 860 48" preserveAspectRatio="none" aria-hidden="true">
+  <svg class="pulse" viewBox="0 0 880 48" preserveAspectRatio="none" aria-hidden="true">
     <path fill="none" stroke="currentColor" stroke-width="1.5"
       d="M0 40 L180 40 C200 40 205 38 210 34 C214 30 216 8 220 6 C224 4 226 30 230 36 C234 40 240 40 250 40
-         L610 40 C625 40 630 39 634 36 C637 33 639 22 642 22 C645 22 647 33 650 36 C654 39 660 40 670 40 L860 40"/>
+         L620 40 C635 40 640 39 644 36 C647 33 649 22 652 22 C655 22 657 33 660 36 C664 39 670 40 680 40 L880 40"/>
   </svg>
 
   <section id="about">
     <h2>About</h2>
     <p>
-      I am a gravitational-wave astrophysicist working at the intersection of precision measurement and noise.
-      As a postdoctoral researcher with the NANOGrav Physics Frontiers Center at the SETI Institute, I use
-      pulsar timing to search for nanohertz gravitational waves, with a focus on how changes in pulsar emission
-      affect timing precision.
+      I am a physicist and a member of the North American Nanohertz Observatory for Gravitational Waves
+      (NANOGrav), and I was previously part of the Laser Interferometer Gravitational-Wave Observatory (LIGO)
+      collaboration. My work centers on understanding noise and turning noisy data into clear conclusions, whether
+      that noise comes from a kilometer-scale interferometer or from the changing emission of a millisecond pulsar.
     </p>
     <p>
-      I completed my PhD in Physics at Louisiana State University in 2024, where I worked on detector
-      characterization and noise analysis for Advanced LIGO at the LIGO Livingston Observatory. Across both
-      detectors, one question ties my work together: what does noise tell us, and how do we keep it from
-      hiding the signals we are listening for?
+      I am currently a NANOGrav Physics Frontiers Center Postdoctoral Researcher at the SETI Institute. I earned
+      my Ph.D. in Physics from Louisiana State University in 2024, where my research focused on gravitational-wave
+      detector data analysis at the LIGO Livingston Observatory, and my B.S. in Meteorology with a minor in
+      Astronomy from SUNY Oswego in 2018.
     </p>
   </section>
 
   <section id="research">
     <h2>Research</h2>
 
-    <h3>Pulse profiles and pulsar timing</h3>
+    <h3>Pulse profile variability and pulsar timing</h3>
     <p>
-      Millisecond pulsars are remarkably stable clocks, but their pulse shapes are not perfectly constant.
-      I model pulse profiles as sums of Gaussian components to understand how profile variability feeds into
-      timing residuals, most recently for PSR J1713+0747. I am also studying nulling and mode-changing in
-      PSR J1909&minus;3744 using single-pulse Green Bank Telescope observations, including dedicated 820&nbsp;MHz
-      observations, and applying dimensionality-reduction methods such as UMAP to classify single pulses.
-      I also work with CHIME data on PSR J2145&minus;0750.
+      NANOGrav uses millisecond pulsars as a galaxy-sized detector for gravitational waves from pairs of
+      supermassive black holes. Pulsars are remarkably stable clocks, but their pulse shapes are not always
+      constant, and those changes can limit how precisely we can time them. I developed Gaussian-component timing
+      methods to model pulse-profile evolution in PSR J1713+0747 through a profile-shape change event, improving
+      its timing precision. This methodology is planned for future NANOGrav data releases.
     </p>
-
-    <h3>NANOGrav timing</h3>
     <p>
-      I am a pulsar timer for the NANOGrav 20-year dataset and contribute to its development, including work on
-      timing events and pulse shape changes across the 15- and 20-year data releases.
+      I am also developing analysis pipelines to study single-pulse emission, mode changing, and weak emission in
+      PSR J1909&minus;3744 using Green Bank Telescope observations, which I help take. For this project I apply
+      statistical and unsupervised machine-learning techniques, such as UMAP, to characterize pulse-to-pulse
+      variability. In PSR J2145&minus;0750, I am investigating mode changing with CHIME and Green Bank Telescope
+      observations to understand how pulse-shape variability affects timing precision and nanohertz
+      gravitational-wave sensitivity.
+    </p>
+    <p>
+      I am a pulsar timer for the NANOGrav 20-year dataset and help test and validate the timing-pipeline software
+      used to produce the collaboration's next gravitational-wave dataset.
     </p>
 
     <h3>Gravitational-wave detector characterization</h3>
     <p>
-      During my PhD, I characterized the loud glitches that motivated my thesis, first noticed near GW170817,
-      and investigated their possible sources. I supported commissioning at LIGO Livingston, writing software
-      to identify noisy environmental sensors, assisting with magnetic-field injections and alignment sensing
-      and control measurements, and serving on detector characterization shifts. I started the project
-      characterizing scattering-arch glitches that later grew into the ArchGEM method, and served on the
-      Noise Mitigation Review Team during O4a and O4b.
+      My Ph.D. research investigated loud transient noise ("loud glitches") in the Advanced LIGO detectors, like
+      the one near GW170817, the first detection of colliding neutron stars. Using t-SNE, auxiliary-channel studies,
+      and controlled noise injections with instrument scientists at LIGO Livingston, I ruled out several suspected
+      sources, including residual gas and dust transiting the laser beam and the gravitational-wave control loop.
+      I also supported commissioning and operations at LIGO Livingston through environmental sensor analysis
+      software, magnetic-field injections, and detector characterization shifts.
+    </p>
+    <p>
+      During the fourth observing run, I co-led and then led the LIGO Noise Mitigation Review Team, which checks
+      gravitational-wave candidates for instrumental noise and recommends how to handle it, and I developed training
+      materials that streamlined onboarding for new reviewers. I also started a project characterizing
+      scattered-light glitches, which a student I mentored later built on to develop the ArchGEM analysis tool.
     </p>
   </section>
 
   <section id="publications">
     <h2>Selected Publications</h2>
     <p class="note">
-      Full list on <a href="https://ui.adsabs.harvard.edu/">NASA ADS</a> <!-- replace with your ADS library link -->
-      and <a href="https://orcid.org/YOUR-ORCID">ORCID</a>.
+      Author order in NANOGrav and LIGO&ndash;Virgo&ndash;KAGRA collaboration papers is alphabetical and does not
+      reflect contribution, so my role is noted for each. A full list of 100+ publications is in my
+      <a href="cv/Nichols_CV.pdf">CV</a> and on <a href="https://orcid.org/0009-0001-1750-3531">ORCID</a>.
     </p>
-    <ul class="entries">
+    <ul class="entries pubs">
       <li>
-        <span class="tag">First author</span>
-        <strong>Nichols, S., et al.</strong> Gaussian component modeling of pulse profiles and pulsar timing
-        of PSR J1713+0747. <em>The Astrophysical Journal</em>.
-        <a href="https://doi.org/10.3847/1538-4357/aeae2d">doi:10.3847/1538-4357/aeae2d</a>
-        <!-- check: exact title, author list, year/volume -->
+        <span class="tag">2026</span>
+        J. Glanzer et al. (LIGO Collaboration),
+        <span class="title">&ldquo;LIGO Detector Characterization in the Second and Third Parts of the Fourth Observing Run.&rdquo;</span>
+        arXiv:2608.12193.
+        <span class="my-role">Noise Mitigation Review Team lead during the second part of the fourth observing run.</span>
+        <span class="ids"><a href="https://arxiv.org/abs/2608.12193">arXiv</a></span>
       </li>
       <li>
-        Jacobson-Bell, et al. (2026). NANOGrav 15-year and 20-year timing events and pulse shape changes.
-        <em>The Astrophysical Journal</em>.
-        <!-- check: exact title + add link -->
+        <span class="tag">2026</span>
+        <strong>S. A. Nichols</strong> et al.,
+        <span class="title">&ldquo;Mitigating the Timing Impact of Anomalous Pulse Profile Shape Variability in PSR J1713+0747 with Gaussian Component Modeling.&rdquo;</span>
+        <em>The Astrophysical Journal</em>, accepted.
+        <span class="my-role">Lead author.</span>
+        <span class="ids">
+          <a href="https://doi.org/10.3847/1538-4357/aeae2d">DOI</a>
+          <a href="https://arxiv.org/abs/2607.12038">arXiv</a>
+        </span>
       </li>
       <li>
-        LIGO Scientific, Virgo, and KAGRA Collaborations (Abac et al. 2025). GW231123: a binary black hole merger.
-        <span class="meta">Noise mitigation reviewer.</span>
-        <!-- check: exact title + add link -->
+        <span class="tag">2026</span>
+        B. Jacobson-Bell et al.,
+        <span class="title">&ldquo;The NANOGrav 15 yr and 20 yr Datasets: Timing Events and Pulse Shape Changes.&rdquo;</span>
+        <em>Astrophys. J.</em> 1005, 58.
+        <span class="my-role">Pulsar timer for the NANOGrav 20-year dataset.</span>
+        <span class="ids">
+          <a href="https://doi.org/10.3847/1538-4357/ae6db6">DOI</a>
+          <a href="https://arxiv.org/abs/2604.05453">arXiv</a>
+        </span>
       </li>
       <li>
-        LIGO Scientific, Virgo, and KAGRA Collaborations (Abbott et al. 2024). GW230529.
-        <!-- check: exact title + add link -->
+        <span class="tag">2026</span>
+        K. McGowan, <strong>S. Nichols</strong>, S. Soni, C. Chatterjee, G. Gonz&aacute;lez, K. Holley-Bockelmann, and K. Jani,
+        <span class="title">&ldquo;ArchGEM: an Advanced Data Analysis Tool for Analyzing Scattered Light Noise in LIGO.&rdquo;</span>
+        Submitted to <em>ApJ</em>.
+        <span class="my-role">Built on a scattered-light glitch project I started; led by a student I mentored.</span>
+        <span class="ids"><a href="https://arxiv.org/abs/2604.23416">arXiv</a></span>
       </li>
       <li>
-        McGowan, et al. ArchGEM: scattering-arch glitch modeling.
-        <!-- check: exact title, year, link -->
+        <span class="tag">2025</span>
+        A. G. Abac et al. (LIGO Scientific, Virgo, and KAGRA Collaborations),
+        <span class="title">&ldquo;GW231123: a Binary Black Hole Merger with Total Mass 190&ndash;265 M<sub>&#9737;</sub>.&rdquo;</span>
+        <span class="my-role">Noise mitigation reviewer for this event, checking whether instrument noise affected the detection.</span>
+        <span class="ids"><a href="https://arxiv.org/abs/2507.08219">arXiv</a></span>
+      </li>
+      <li>
+        <span class="tag">2025</span>
+        S. Soni et al. (LIGO Collaboration),
+        <span class="title">&ldquo;LIGO Detector Characterization in the first half of the fourth Observing run.&rdquo;</span>
+        <em>Class. Quant. Grav.</em> 42, 085016.
+        <span class="my-role">Editorial team member and Noise Mitigation Review Team co-lead.</span>
+        <span class="ids">
+          <a href="https://doi.org/10.1088/1361-6382/adc4b6">DOI</a>
+          <a href="https://arxiv.org/abs/2409.02831">arXiv</a>
+        </span>
+      </li>
+      <li>
+        <span class="tag">2024</span>
+        J. Janquart et al.,
+        <span class="title">&ldquo;What is the nature of GW230529? An exploration of the gravitational lensing hypothesis.&rdquo;</span>
+        <em>MNRAS</em>.
+        <span class="my-role">Detector characterization expert.</span>
+        <span class="ids">
+          <a href="https://doi.org/10.1093/mnras/staf049">DOI</a>
+          <a href="https://arxiv.org/abs/2409.07298">arXiv</a>
+        </span>
+      </li>
+      <li>
+        <span class="tag">2024</span>
+        A. G. Abac et al. (LIGO Scientific, Virgo, and KAGRA Collaborations),
+        <span class="title">&ldquo;Observation of Gravitational Waves from the Coalescence of a 2.5&ndash;4.5 M<sub>&#9737;</sub> Compact Object and a Neutron Star.&rdquo;</span>
+        <em>Astrophys. J. Lett.</em> 970, L34.
+        <span class="my-role">Detector characterization expert on the editorial team for the GW230529 discovery paper.</span>
+        <span class="ids">
+          <a href="https://doi.org/10.3847/2041-8213/ad5beb">DOI</a>
+          <a href="https://arxiv.org/abs/2404.04248">arXiv</a>
+        </span>
+      </li>
+      <li>
+        <span class="tag">2024</span>
+        <strong>S. Nichols</strong>,
+        <span class="title">&ldquo;Investigations and Characterization of Loud Transient Noise in Advanced LIGO Detectors.&rdquo;</span>
+        Ph.D. thesis, Louisiana State University.
+        <span class="ids"><a href="https://doi.org/10.31390/gradschool_dissertations.6539">DOI</a></span>
+      </li>
+      <li>
+        <span class="tag">2021</span>
+        D. Davis et al. (LIGO Collaboration),
+        <span class="title">&ldquo;LIGO detector characterization in the second and third observing runs.&rdquo;</span>
+        <em>Class. Quant. Grav.</em> 38, 135014.
+        <span class="my-role">Provided analysis for loud glitches.</span>
+        <span class="ids">
+          <a href="https://doi.org/10.1088/1361-6382/abfd85">DOI</a>
+          <a href="https://arxiv.org/abs/2101.11673">arXiv</a>
+        </span>
       </li>
     </ul>
   </section>
 
   <section id="talks">
-    <h2>Talks &amp; Outreach</h2>
+    <h2>Selected Talks</h2>
+    <ul class="entries">
+      <li><div class="row"><div><strong>Listening for Ripples in Spacetime Through Noise</strong><br><span class="meta">ScienceKind Talk Series &middot; Remote</span></div><span class="when">Oct 2026</span></div></li>
+      <li><div class="row"><div><strong>Timing Through Pulse Shape Variability in PSR J1713+0747</strong><br><span class="meta">International Pulsar Timing Array Science Week &middot; Northern Drakensberg, South Africa</span></div><span class="when">Jun 2026</span></div></li>
+      <li><div class="row"><div><strong>Searching for Pulse Nulling in PSR J1909&minus;3744</strong><br><span class="meta">Green Bank Telescope Colloquium &middot; Remote</span></div><span class="when">May 2026</span></div></li>
+      <li><div class="row"><div><strong>Gaussian Modeling of a Pulse Profile Variation in PSR J1713+0747</strong><br><span class="meta">Caribbean Future of Science Symposium &middot; Bridgetown, Barbados</span></div><span class="when">Mar 2026</span></div></li>
+      <li><div class="row"><div><strong>How to Train Your Pulsar: Timing J1713+0747 with Pulse Profile Components</strong><br><span class="meta">American Physical Society Global Summit &middot; Denver, CO</span></div><span class="when">Mar 2026</span></div></li>
+      <li><div class="row"><div><strong>Einstein Was Kind of Wrong: How We Finally Heard the Universe</strong><br><span class="meta">Pulsar Science Collaboratory &middot; Remote</span></div><span class="when">Feb 2026</span></div></li>
+      <li><div class="row"><div><strong>Timing J1713+0747 with Pulse Profile Components</strong><br><span class="meta">NANOGrav Fall 2025 Collaboration Meeting &middot; Missoula, MT</span></div><span class="when">Nov 2025</span></div></li>
+      <li><div class="row"><div><strong>The Anatomy of a Pulse: Gaussian Fitting Through the J1713+0747 Anomaly</strong><br><span class="meta">IPTA Science Week (poster) &middot; Pasadena, CA</span></div><span class="when">Jun 2025</span></div></li>
+      <li><div class="row"><div><strong>Cosmic Clocks and Celestial Timekeepers</strong><br><span class="meta">Caribbean Future of Science Symposium &middot; Mount Irvine, Tobago</span></div><span class="when">Mar 2025</span></div></li>
+      <li><div class="row"><div><strong>The Dirty Laundry of Gravitational Wave Detection</strong><br><span class="meta">Invited lecture, Brown University Theoretical Physics Research Group &middot; Providence, RI</span></div><span class="when">Nov 2023</span></div></li>
+      <li><div class="row"><div><strong>Exploring the Origins of Loud Glitches in aLIGO Detector Data</strong><br><span class="meta">LIGO&ndash;Virgo&ndash;KAGRA Conference (poster) &middot; Toyama, Japan</span></div><span class="when">Sep 2023</span></div></li>
+      <li><div class="row"><div><strong>Investigation of Loud Transient Noise Sources in aLIGO Detectors</strong><br><span class="meta">American Physical Society Conference &middot; Minneapolis, MN</span></div><span class="when">Apr 2023</span></div></li>
+      <li><div class="row"><div><strong>LIGO Detector Characterization for Instrument Scientists</strong><br><span class="meta">LIGO&ndash;Virgo&ndash;KAGRA Conference, on behalf of the Detector Characterization Group (co-speaker) &middot; Remote</span></div><span class="when">Mar 2022</span></div></li>
+    </ul>
+  </section>
+
+  <section id="outreach">
+    <h2>Outreach &amp; Teaching</h2>
     <div class="two-col">
       <div>
-        <h3>Selected talks</h3>
+        <h3>Outreach and media</h3>
         <ul class="entries">
-          <li>
-            <strong>J1909&minus;3744 nulling and mode-changing update</strong><br>
-            <span class="meta">NANOGrav Fall Collaboration Meeting, Nov 2026</span>
-          </li>
-          <li>
-            <strong>A Crash Course in Pulsar Timing</strong><br>
-            <span class="meta">NANOGrav student workshop, Nov 2026</span>
-          </li>
-          <li>
-            <strong>J1909&minus;3744 nulling and mode-changing</strong><br>
-            <span class="meta">APS Global Summit, Apr 2027 (submitted)</span>
-          </li>
+          <li><strong>K&ndash;5 Career Day</strong><br><span class="meta">Interactive astrophysics demonstrations &middot; Harlem, NY &middot; Jun 2026</span></li>
+          <li><strong>Secondary School Outreach Program</strong><br><span class="meta">Research talk and Q&amp;A with students &middot; Barbados &middot; Mar 2026</span></li>
+          <li><strong>Channel 5 News Interview</strong><br><span class="meta">Astrophysics research, science education, and the Caribbean Future of Science Symposium &middot; Tobago &middot; Mar 2025</span></li>
+          <li><strong>Space News with Jay Ducote</strong><br><span class="meta">Gravitational waves on public radio &middot; Baton Rouge, LA &middot; Jul 2021</span></li>
+          <li><strong>Astronomy on Tap</strong><br><span class="meta">Public talk &middot; Baton Rouge, LA &middot; Sep 2019</span></li>
+          <li><strong>Girls&rsquo; Day at the Museum</strong><br><span class="meta">Hands-on STEM activities &middot; Baton Rouge, LA &middot; Feb 2019</span></li>
         </ul>
       </div>
       <div>
-        <h3>Public outreach</h3>
+        <h3>Teaching and mentorship</h3>
         <ul class="entries">
-          <li>
-            <strong>Listening for Ripples in Spacetime through Noise</strong><br>
-            <span class="meta">ScienceKind public talk, 2026</span>
-          </li>
+          <li><strong>NANOGrav Student Workshop</strong><br><span class="meta">Introductory pulsar timing talk and hands-on computational activity &middot; Fall 2026</span></li>
+          <li><strong>IPTA Student Mentor</strong><br><span class="meta">Two international graduate students developing methods to compare pulse profiles across radio telescopes &middot; Present</span></li>
+          <li><strong>Honors Thesis Supervisor</strong><br><span class="meta">Undergraduate thesis on LIGO detector characterization and graduate school application guidance &middot; 2024&ndash;2025</span></li>
+          <li><strong>LIGO Research Mentor</strong><br><span class="meta">Summer undergraduates and a master&rsquo;s student, whose research resulted in a submitted manuscript &middot; 2022&ndash;2024</span></li>
+          <li><strong>LSU Graduate Teaching Assistant</strong><br><span class="meta">Physics and astronomy labs; implemented a new astronomy lab curriculum &middot; 2018&ndash;2020</span></li>
         </ul>
       </div>
     </div>
   </section>
 
   <section id="service">
-    <h2>Service &amp; Leadership</h2>
+    <h2>Leadership &amp; Service</h2>
     <ul class="entries">
-      <li>Member-at-Large, Executive Committee, APS Division of Gravitational Physics (DGRAV)</li>
-      <li>Co-chair, International Pulsar Timing Array Pulse Profile Analysis Working Group</li>
-      <li>Member, NANOGrav Engagement and Community Committee</li>
-      <li>Organizing committee, NANOGrav Fall 2026 student workshop (pulsar timing session)</li>
-      <li>Developed onboarding training materials for the LIGO Noise Mitigation Review Team</li>
+      <li><div class="row"><div><strong>APS Division of Gravitational Physics (DGRAV)</strong><br><span class="meta">Executive Committee, Member-at-Large; helps plan DGRAV invited-speaker sessions for the APS Global Summit</span></div><span class="when">2026&ndash;present</span></div></li>
+      <li><div class="row"><div><strong>International Pulsar Timing Array</strong><br><span class="meta">Co-Chair, Pulse Profile Analysis Working Group</span></div><span class="when">2025&ndash;present</span></div></li>
+      <li><div class="row"><div><strong>NANOGrav Engagement &amp; Community Committee</strong><br><span class="meta">Postdoctoral Representative</span></div><span class="when">2025&ndash;present</span></div></li>
+      <li><div class="row"><div><strong>NANOGrav Fall Student Workshop</strong><br><span class="meta">Organizing Committee; pulsar timing session</span></div><span class="when">2026</span></div></li>
+      <li><div class="row"><div><strong>American Physical Society</strong><br><span class="meta">Science Advocate</span></div><span class="when">2026</span></div></li>
+      <li><div class="row"><div><strong>LSU Physics &amp; Astronomy Innovation and Engagement Committee</strong><br><span class="meta">Graduate Student Representative</span></div><span class="when">2020&ndash;2023</span></div></li>
+      <li><div class="row"><div><strong>LSU Physics &amp; Astronomy Graduate Student Organization</strong><br><span class="meta">Executive Board</span></div><span class="when">2021&ndash;2022</span></div></li>
     </ul>
   </section>
 
@@ -295,7 +396,7 @@
     <h2>Contact</h2>
     <p>
       SETI Institute<br>
-      <a href="mailto:YOUR-EMAIL">YOUR-EMAIL</a>
+      <a href="mailto:shania.nichols@nanograv.org">shania.nichols@nanograv.org</a>
     </p>
   </section>
 

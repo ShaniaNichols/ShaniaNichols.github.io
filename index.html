@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shania Nichols | Gravitational-Wave Astrophysics</title>
+  <meta name="description" content="Shania Nichols, postdoctoral researcher studying nanohertz gravitational waves with pulsar timing (NANOGrav) and gravitational-wave detector noise (aLIGO).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1c2230;
+      --muted: #5b6474;
+      --rule: #e3e6ec;
+      --bg: #fbfbfa;
+      --card: #ffffff;
+      --accent: #24508f;
+      --accent-soft: #e8eef8;
+      --max: 860px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink: #e6e8ee;
+        --muted: #9aa3b2;
+        --rule: #2a3040;
+        --bg: #12151c;
+        --card: #181c25;
+        --accent: #8fb3ec;
+        --accent-soft: #1f2a3d;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--bg);
+    }
+    a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
+    a:hover { border-bottom-color: currentColor; }
+
+    /* Navigation */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--rule);
+    }
+    nav .inner {
+      max-width: var(--max); margin: 0 auto; padding: 14px 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    nav .name { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: 18px; color: var(--ink); }
+    nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 22px; flex-wrap: wrap; }
+    nav ul a { color: var(--muted); font-size: 14.5px; font-weight: 500; }
+    nav ul a:hover { color: var(--accent); border-bottom-color: transparent; }
+
+    main { max-width: var(--max); margin: 0 auto; padding: 0 24px 80px; }
+
+    /* Hero */
+    .hero {
+      display: grid; grid-template-columns: 200px 1fr; gap: 40px; align-items: center;
+      padding: 64px 0 40px;
+    }
+    .photo {
+      width: 200px; height: 200px; border-radius: 50%;
+      background: var(--accent-soft); border: 1px solid var(--rule);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--muted); font-size: 13px; text-align: center; overflow: hidden;
+    }
+    .photo img { width: 100%; height: 100%; object-fit: cover; }
+    h1 {
+      font-family: "Source Serif 4", Georgia, serif; font-weight: 600;
+      font-size: 42px; line-height: 1.15; margin: 0 0 6px;
+    }
+    .role { color: var(--muted); margin: 0 0 18px; font-size: 16px; }
+    .links { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .links a {
+      display: inline-block; padding: 6px 14px; border-radius: 999px;
+      border: 1px solid var(--rule); background: var(--card);
+      font-size: 14px; font-weight: 500;
+    }
+    .links a:hover { border-color: var(--accent); }
+
+    /* Pulse-profile motif */
+    .pulse { display: block; width: 100%; height: 48px; margin: 8px 0 0; color: var(--accent); opacity: .55; }
+
+    section { padding: 36px 0 8px; border-top: 1px solid var(--rule); }
+    section:first-of-type { border-top: none; }
+    h2 {
+      font-family: "Source Serif 4", Georgia, serif; font-weight: 600;
+      font-size: 28px; margin: 0 0 16px;
+    }
+    h3 { font-size: 17px; font-weight: 600; margin: 26px 0 6px; }
+    p { margin: 0 0 14px; }
+
+    /* Lists of items */
+    .entries { list-style: none; margin: 0; padding: 0; }
+    .entries li { padding: 12px 0; border-bottom: 1px dashed var(--rule); }
+    .entries li:last-child { border-bottom: none; }
+    .meta { color: var(--muted); font-size: 14.5px; }
+    .tag {
+      display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: .02em;
+      color: var(--accent); background: var(--accent-soft);
+      padding: 1px 8px; border-radius: 4px; margin-right: 6px; vertical-align: 1px;
+    }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+    .note { font-size: 14.5px; color: var(--muted); }
+
+    footer {
+      max-width: var(--max); margin: 0 auto; padding: 24px;
+      border-top: 1px solid var(--rule); color: var(--muted); font-size: 14px;
+    }
+
+    @media (max-width: 680px) {
+      body { font-size: 16px; }
+      nav ul { display: none; }
+      .hero { grid-template-columns: 1fr; text-align: left; gap: 24px; padding-top: 40px; }
+      .photo { width: 140px; height: 140px; }
+      h1 { font-size: 34px; }
+      .two-col { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <a class="name" href="#top">Shania Nichols</a>
+    <ul>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#talks">Talks &amp; Outreach</a></li>
+      <li><a href="#service">Service</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="top">
+
+  <header class="hero">
+    <div class="photo">
+      <!-- Replace with: <img src="images/headshot.jpg" alt="Shania Nichols"> -->
+      Add a headshot<br>images/headshot.jpg
+    </div>
+    <div>
+      <h1>Shania Nichols</h1>
+      <p class="role">NANOGrav Physics Frontiers Center Postdoctoral Researcher<br>SETI Institute</p>
+      <ul class="links">
+        <li><a href="cv/Nichols_CV.pdf">CV</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="https://github.com/YOUR-USERNAME">GitHub</a></li>
+        <li><a href="https://orcid.org/YOUR-ORCID">ORCID</a></li>
+        <li><a href="#contact">Email</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <svg class="pulse" viewBox="0 0 860 48" preserveAspectRatio="none" aria-hidden="true">
+    <path fill="none" stroke="currentColor" stroke-width="1.5"
+      d="M0 40 L180 40 C200 40 205 38 210 34 C214 30 216 8 220 6 C224 4 226 30 230 36 C234 40 240 40 250 40
+         L610 40 C625 40 630 39 634 36 C637 33 639 22 642 22 C645 22 647 33 650 36 C654 39 660 40 670 40 L860 40"/>
+  </svg>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      I am a gravitational-wave astrophysicist working at the intersection of precision measurement and noise.
+      As a postdoctoral researcher with the NANOGrav Physics Frontiers Center at the SETI Institute, I use
+      pulsar timing to search for nanohertz gravitational waves, with a focus on how changes in pulsar emission
+      affect timing precision.
+    </p>
+    <p>
+      I completed my PhD in Physics at Louisiana State University in 2024, where I worked on detector
+      characterization and noise analysis for Advanced LIGO at the LIGO Livingston Observatory. Across both
+      detectors, one question ties my work together: what does noise tell us, and how do we keep it from
+      hiding the signals we are listening for?
+    </p>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+
+    <h3>Pulse profiles and pulsar timing</h3>
+    <p>
+      Millisecond pulsars are remarkably stable clocks, but their pulse shapes are not perfectly constant.
+      I model pulse profiles as sums of Gaussian components to understand how profile variability feeds into
+      timing residuals, most recently for PSR J1713+0747. I am also studying nulling and mode-changing in
+      PSR J1909&minus;3744 using single-pulse Green Bank Telescope observations, including dedicated 820&nbsp;MHz
+      observations, and applying dimensionality-reduction methods such as UMAP to classify single pulses.
+      I also work with CHIME data on PSR J2145&minus;0750.
+    </p>
+
+    <h3>NANOGrav timing</h3>
+    <p>
+      I am a pulsar timer for the NANOGrav 20-year dataset and contribute to its development, including work on
+      timing events and pulse shape changes across the 15- and 20-year data releases.
+    </p>
+
+    <h3>Gravitational-wave detector characterization</h3>
+    <p>
+      During my PhD, I characterized the loud glitches that motivated my thesis, first noticed near GW170817,
+      and investigated their possible sources. I supported commissioning at LIGO Livingston, writing software
+      to identify noisy environmental sensors, assisting with magnetic-field injections and alignment sensing
+      and control measurements, and serving on detector characterization shifts. I started the project
+      characterizing scattering-arch glitches that later grew into the ArchGEM method, and served on the
+      Noise Mitigation Review Team during O4a and O4b.
+    </p>
+  </section>
+
+  <section id="publications">
+    <h2>Selected Publications</h2>
+    <p class="note">
+      Full list on <a href="https://ui.adsabs.harvard.edu/">NASA ADS</a> <!-- replace with your ADS library link -->
+      and <a href="https://orcid.org/YOUR-ORCID">ORCID</a>.
+    </p>
+    <ul class="entries">
+      <li>
+        <span class="tag">First author</span>
+        <strong>Nichols, S., et al.</strong> Gaussian component modeling of pulse profiles and pulsar timing
+        of PSR J1713+0747. <em>The Astrophysical Journal</em>.
+        <a href="https://doi.org/10.3847/1538-4357/aeae2d">doi:10.3847/1538-4357/aeae2d</a>
+        <!-- check: exact title, author list, year/volume -->
+      </li>
+      <li>
+        Jacobson-Bell, et al. (2026). NANOGrav 15-year and 20-year timing events and pulse shape changes.
+        <em>The Astrophysical Journal</em>.
+        <!-- check: exact title + add link -->
+      </li>
+      <li>
+        LIGO Scientific, Virgo, and KAGRA Collaborations (Abac et al. 2025). GW231123: a binary black hole merger.
+        <span class="meta">Noise mitigation reviewer.</span>
+        <!-- check: exact title + add link -->
+      </li>
+      <li>
+        LIGO Scientific, Virgo, and KAGRA Collaborations (Abbott et al. 2024). GW230529.
+        <!-- check: exact title + add link -->
+      </li>
+      <li>
+        McGowan, et al. ArchGEM: scattering-arch glitch modeling.
+        <!-- check: exact title, year, link -->
+      </li>
+    </ul>
+  </section>
+
+  <section id="talks">
+    <h2>Talks &amp; Outreach</h2>
+    <div class="two-col">
+      <div>
+        <h3>Selected talks</h3>
+        <ul class="entries">
+          <li>
+            <strong>J1909&minus;3744 nulling and mode-changing update</strong><br>
+            <span class="meta">NANOGrav Fall Collaboration Meeting, Nov 2026</span>
+          </li>
+          <li>
+            <strong>A Crash Course in Pulsar Timing</strong><br>
+            <span class="meta">NANOGrav student workshop, Nov 2026</span>
+          </li>
+          <li>
+            <strong>J1909&minus;3744 nulling and mode-changing</strong><br>
+            <span class="meta">APS Global Summit, Apr 2027 (submitted)</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3>Public outreach</h3>
+        <ul class="entries">
+          <li>
+            <strong>Listening for Ripples in Spacetime through Noise</strong><br>
+            <span class="meta">ScienceKind public talk, 2026</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="service">
+    <h2>Service &amp; Leadership</h2>
+    <ul class="entries">
+      <li>Member-at-Large, Executive Committee, APS Division of Gravitational Physics (DGRAV)</li>
+      <li>Co-chair, International Pulsar Timing Array Pulse Profile Analysis Working Group</li>
+      <li>Member, NANOGrav Engagement and Community Committee</li>
+      <li>Organizing committee, NANOGrav Fall 2026 student workshop (pulsar timing session)</li>
+      <li>Developed onboarding training materials for the LIGO Noise Mitigation Review Team</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      SETI Institute<br>
+      <a href="mailto:YOUR-EMAIL">YOUR-EMAIL</a>
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 Shania Nichols &middot; Last updated November 2026
+</footer>
+
+</body>
+</html>
